@@ -1,0 +1,262 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto Condensed',Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;}
+
+/* Contenedor del header */
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 2.3fr 1fr;
+    align-items:flex-start; /* Centra verticalmente */
+    background-color: #0056A8; /* Azul del header */
+    background: linear-gradient(to right, #1d71b8, #003595); /* Degradado de rojo a azul */
+    color: white;
+    height: 120px;
+}
+
+
+/* Logo principal y título */
+.logo-container {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+}
+.logo-img{
+    display: flex;
+    padding-left: 50px;
+
+}
+/* Logo principal y título */
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    height: 120px;
+    cursor: default;
+
+
+}
+
+.logo-container .header-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    
+}
+.logo-container img{
+    width: 170px;
+    height: 150px;
+}
+
+/* Logos secundarios */
+.secondary-logos {
+    margin-top: 4px;
+    page-break-inside: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 120px;
+
+}
+
+.logo2{
+    padding-right: 100px;
+
+}
+.secondary-logos img{
+    width: 170px;
+    height: 120px;
+}
+
+
+.uni-container {
+    height: auto; /* Permitir que la altura se ajuste al contenido */
+    padding: 0 0; /* Añadir espacio para que el texto no quede tan ajustado */
+    display: flex; /* Usar flex para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Asegurar el centrado del texto */
+    background: linear-gradient(to left, #1d71b8, #003595); /* Degradado de rojo a azul */
+    height: 30px;
+}
+
+.uni-title h4 {
+    margin: 0; /* Eliminar márgenes por defecto del h3 */
+    font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+    color: rgba(255, 255, 255, 0.5); /* Rojo semitransparente */
+    font-weight: 300;
+    cursor: default;
+}
+.menu-container{
+    height: auto; /* Permitir que la altura se ajuste al contenido */
+    padding: 0 0; /* Añadir espacio para que el texto no quede tan ajustado */
+    display: flex; /* Usar flex para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Asegurar el centrado del texto */
+    background-color: #b89d2b;
+    height: 40px;
+}
+.nav{
+    display: grid;
+    height: 40px;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Asegurar el centrado del texto */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.nav a {
+    display: flex; /* Cambiar a flex para usar align-items y justify-content */
+    height: 40px;
+    width: 190px;
+    text-decoration: none;
+    color: white;
+    border-left: 1px solid white; /* Borde izquierdo para todos los enlaces */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Asegurar el centrado del texto */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+.nav a.inicio {
+    border-left: none !important; /* Eliminar borde izquierdo para el enlace con clase 'inicio' */
+}
+
+.nav a:hover {
+    background-color: #cb9700; /* Color de fondo más intenso */
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo básico para el banner */
+.banner {
+    margin-top: 2px;
+    width: 100%;
+    height: 300px;
+    background-image: url('Assets/banner.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el área */
+    background-position: left; /* Alinea la imagen a la izquierda */
+    position: relative;
+}
+
+/* Espacio para escribir a la izquierda */
+.texto {
+    color: white;
+    width: 45%; /* Ajusta el ancho del espacio azul */
+    padding-top: 20px;
+    padding-left: 20px;
+
+    position: absolute;
+    left: 0; /* Coloca el espacio azul en la parte izquierda */
+    height: 100%; /* Asegura que ocupe toda la altura del banner */
+}
+.texto h1{
+    margin: 0;
+    padding: 0;
+}
+.texto h2{
+    margin: 0;
+    padding: 0;
+    color: #cb9700;
+    text-decoration: underline ;
+}
+
+.texto p{
+    margin-left: 40px;
+    padding: 10px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor principal de las noticias */
+.noticias {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de tamaño igual */
+    gap: 20px; /* Espacio entre las noticias */
+}
+
+/* Título de noticias */
+.noticias h1 {
+    text-align: left;
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 25px;
+    grid-column: span 3; /* Hace que el título ocupe todo el ancho (3 columnas) */
+}
+
+/* Estilo para cada noticia */
+.noticia {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left; /* Centra el contenido y ajusta los elementos al lado izquierdo */
+    position: relative; /* Necesario para el posicionamiento absoluto del botón */
+}
+
+/* Imagen de la noticia */
+.noticia img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Tema de la noticia (sin fondo, color azul) */
+.tema {
+    color: #007bff; /* Color azul */
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Título de la noticia (alineado a la izquierda) */
+.noticia h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left; /* Alinea el título de la noticia a la izquierda */
+}
+
+/* Botón "Ver más" */
+.ver-mas {
+    color: #b89d2b;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: absolute; /* Hace que el botón se posicione dentro de la tarjeta */
+    bottom: 15px; /* Lo coloca en la parte inferior */
+    right: 0; /* Lo alinea a la derecha */
+    width: auto; /* El tamaño del botón se ajustará al texto */
+}
