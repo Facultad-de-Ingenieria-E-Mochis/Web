@@ -333,158 +333,6 @@ body {
 
 
 
-@media (max-width: 1351px) {
-    .uni-title h4 {
-        font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
-    }  
-}
-
-@media (max-width: 1235px) {
-
-    .nav a {
-        width: 120px;
-
-    }
-    
-    .uni-title{
-        padding-left: 10%;
-    }
-    .logo-img{
-        padding-left: 0;
-    }
-    .logo2{
-        padding-right: 0;
-    }
-    .uas-title{
-        display: none;
-    }
-    .uas-title2{
-        display: flex;
-        visibility: visible;
-
-    }
-}
-
-@media (max-width: 840px) {
-    .logo-container .header-title {
-        font-size: 1.3em;
-        font-weight: 700;
-    }
-    .title-container{
-        margin-left: 5px;
-    }
-    .uni-title h3 {
-        font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
-        font-weight: 400;
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    .logo-container .header-title {
-        font-size: 1.2em;
-        font-weight: 500;
-    }
-
-    .banner{
-        display: none;
-    }
-    .uni-title h3 {
-        display: none;
-    }
-
-
-    /* Títulos */
-    .noticias h1 {
-        font-size: 1.7em; /* Tamaño más pequeño */
-        text-align: start; /* Centrado para móviles */
-    }
-
-    .noticia {
-        padding: 10px; /* Menos espacio */
-    }
-    .menu-container{
-        display: none;
-    }
-    .noticias {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-        width: 100%;
-        display: block; /* Cambiar de grid a block para apilar los elementos */
-        max-width: 800px; /* Limitar el ancho máximo */
-        margin: 0 auto; /* Centrar las noticias horizontalmente */
-        padding: 0 5%; /* Espaciado en los laterales */
-        box-sizing: border-box; /* Aseguramos que el padding y el border no afecten el ancho */
-
-    }
-
-
-    .noticia img {
-        width: 100%; /* Las imágenes también ocupan todo el ancho disponible */
-        max-height: 200px; /* Limitar la altura máxima de las imágenes */
-        object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsión */
-    }
-    .noticia h3 {
-        padding-bottom: 20px;
-    }
-    .ver-mas{
-        padding-top: 20px;
-    }
-    .tutorias {
-
-        grid-template-columns: 1fr; /* Crea 2 columnas de tamaño igual */
-        width: 100%;
-        display: block; /* Cambiar de grid a block para apilar los elementos */
-    }
-    .tutorias h1 {
-        font-size: 1.7em; /* Tamaño más pequeño */
-        text-align: start; /* Centrado para móviles */
-        margin-left: 5%;
-    }
-    .logo-container img{
-        width: 110px;
-        height: auto;
-    }
-    
-    /* Logos secundarios */
-
-    .secondary-logos img{
-        width: 110px;
-        height: auto;
-    }    
-}
-
-
-
-
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 1rem;
-    }
-
-    .nav a {
-        font-size: 0.8rem;
-    }
-
-    .banner h1 {
-        font-size: 1.2rem;
-    }
-
-    .banner h2 {
-        font-size: 1rem;
-    }
-    .logo-container img{
-        width: 80px;
-        height: 100px;
-    }
-    
-    /* Logos secundarios */
-
-    .secondary-logos img{
-        width: 80px;
-        height: auto;
-    }
-}
 
 
 
@@ -546,6 +394,7 @@ body {
   
 
   /* Sección de información */
+/* Sección de información */
 .info {
     display: flex;
     justify-content: space-between; /* Distribuye los elementos de forma uniforme */
@@ -556,9 +405,10 @@ body {
     text-align: center;
   }
   
+  /* Estilo para los items dentro de .info */
   .info-item {
     flex: 1; /* Permite que los elementos se distribuyan uniformemente */
-    max-width: 30%; /* Limita el ancho de cada columna */
+    max-width: 33%; /* Limita el ancho de cada columna */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -592,6 +442,29 @@ body {
     color: #000;
     margin: 0;
   }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    /* Cambiar el comportamiento de los items */
+    .info-item {
+      max-width: 100%; /* Hace que los elementos ocupen todo el ancho */
+    }
+  
+    /* Asegura que el div con el iframe ocupe el espacio disponible */
+    .info-item.iframe-container {
+      flex-grow: 2; /* Hace que el div del iframe ocupe el espacio restante */
+    }
+  
+    /* Asegura que el iframe ocupe el 100% del ancho */
+    .info-item iframe {
+      width: 100%;
+      height: 300px; /* Ajusta la altura según lo necesites */
+    }
+  }
+  
+
+
+
   /* Sección de redes sociales */
 .redes-sociales {
     text-align: center;
@@ -681,3 +554,178 @@ body {
     color: #333;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+@media (max-width: 1351px) {
+    .uni-title h4 {
+        font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+    }  
+}
+
+@media (max-width: 1235px) {
+
+    .nav a {
+        width: 120px;
+
+    }
+    
+    .uni-title{
+        padding-left: 10%;
+    }
+    .logo-img{
+        padding-left: 0;
+    }
+    .logo2{
+        padding-right: 0;
+    }
+    .uas-title{
+        display: none;
+    }
+    .uas-title2{
+        display: flex;
+        visibility: visible;
+
+    }
+}
+
+@media (max-width: 840px) {
+    .logo-container .header-title {
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+    .title-container{
+        margin-left: 5px;
+    }
+    .uni-title h3 {
+        font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+        font-weight: 400;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .logo-container .header-title {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    .icons-servicio {
+        flex-direction: row !important;
+
+      }
+
+    .banner{
+        display: none;
+    }
+    .uni-title h3 {
+        display: none;
+    }
+
+
+    /* Títulos */
+    .noticias h1 {
+        font-size: 1.7em; /* Tamaño más pequeño */
+        text-align: start; /* Centrado para móviles */
+    }
+
+    .noticia {
+        padding: 10px; /* Menos espacio */
+    }
+    .menu-container{
+        display: none;
+    }
+    .noticias {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        width: 100%;
+        display: block; /* Cambiar de grid a block para apilar los elementos */
+        max-width: 800px; /* Limitar el ancho máximo */
+        margin: 0 auto; /* Centrar las noticias horizontalmente */
+        padding: 0 5%; /* Espaciado en los laterales */
+        box-sizing: border-box; /* Aseguramos que el padding y el border no afecten el ancho */
+
+    }
+
+
+    .noticia img {
+        width: 100%; /* Las imágenes también ocupan todo el ancho disponible */
+        max-height: 200px; /* Limitar la altura máxima de las imágenes */
+        object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsión */
+    }
+    .noticia h3 {
+        padding-bottom: 20px;
+    }
+    .ver-mas{
+        padding-top: 20px;
+    }
+    .tutorias {
+
+        grid-template-columns: 1fr; /* Crea 2 columnas de tamaño igual */
+        width: 100%;
+        display: block; /* Cambiar de grid a block para apilar los elementos */
+    }
+    .tutorias h1 {
+        font-size: 1.7em; /* Tamaño más pequeño */
+        text-align: start; /* Centrado para móviles */
+        margin-left: 5%;
+    }
+    .logo-container img{
+        width: 110px;
+        height: auto;
+    }
+    
+    /* Logos secundarios */
+
+    .secondary-logos img{
+        width: 110px;
+        height: auto;
+    }
+        
+}
+
+
+
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1rem;
+    }
+
+    .nav a {
+        font-size: 0.8rem;
+    }
+
+    .banner h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner h2 {
+        font-size: 1rem;
+    }
+    .logo-container img{
+        width: 80px;
+        height: 100px;
+    }
+    
+    /* Logos secundarios */
+
+    .secondary-logos img{
+        width: 80px;
+        height: auto;
+    }
+}
