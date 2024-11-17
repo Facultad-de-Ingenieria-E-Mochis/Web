@@ -382,6 +382,10 @@ body {
 
 
 @media (max-width: 768px) {
+    .logo-container .header-title {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
 
     .banner{
         display: none;
@@ -436,6 +440,17 @@ body {
         font-size: 1.7em; /* Tamaño más pequeño */
         text-align: start; /* Centrado para móviles */
         margin-left: 5%;
+    }
+    .logo-container img{
+        width: 110px;
+        height: auto;
+    }
+    
+    /* Logos secundarios */
+
+    .secondary-logos img{
+        width: 110px;
+        height: auto;
     }    
 }
 
@@ -457,6 +472,17 @@ body {
 
     .banner h2 {
         font-size: 1rem;
+    }
+    .logo-container img{
+        width: 80px;
+        height: 100px;
+    }
+    
+    /* Logos secundarios */
+
+    .secondary-logos img{
+        width: 80px;
+        height: auto;
     }
 }
 
