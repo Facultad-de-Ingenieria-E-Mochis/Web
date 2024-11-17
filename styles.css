@@ -400,7 +400,7 @@ body {
     justify-content: space-between; /* Distribuye los elementos de forma uniforme */
     align-items: flex-start; /* Alinea los elementos desde la parte superior */
     gap: 20px;
-    padding: 40px 10%;
+    padding: 40px 5%;
     flex-wrap: wrap; /* Ajusta elementos en varias filas si el ancho no es suficiente */
     text-align: center;
   }
@@ -452,14 +452,22 @@ body {
   
     /* Asegura que el div con el iframe ocupe el espacio disponible */
     .info-item.iframe-container {
-      flex-grow: 2; /* Hace que el div del iframe ocupe el espacio restante */
+      flex-grow: 1; /* Hace que el div del iframe ocupe el espacio restante */
     }
   
     /* Asegura que el iframe ocupe el 100% del ancho */
     .info-item iframe {
       width: 100%;
-      height: 300px; /* Ajusta la altura según lo necesites */
+      height: auto; /* Ajusta la altura según lo necesites */
     }
+    .info-content i {
+        font-size: 50px; /* Tamaño más grande para los íconos */
+      }
+      
+      .info-content p {
+        font-size: 16px;
+      }
+
   }
   
 
