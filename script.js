@@ -8,9 +8,11 @@ let startX = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let isDragging = false;
+let autoSlideTimer;
 
+// Verificar si la pantalla es menor a 768px
 function isMobile() {
-    return window.innerWidth < 769;
+    return window.innerWidth < 768;
 }
 
 // Función para mover el carrusel
@@ -63,11 +65,13 @@ carruselWrapper.addEventListener('mousedown', (e) => {
     isDragging = true;
     startX = e.pageX;
     carruselWrapper.style.cursor = 'grabbing';
+    resetAutoSlideTimer(); // Reiniciar el contador de auto-slide al interactuar
 });
 carruselWrapper.addEventListener('touchstart', (e) => {
     if (!isMobile()) return; // No ejecutar en pantallas grandes
     isDragging = true;
     startX = e.touches[0].pageX;
+    resetAutoSlideTimer(); // Reiniciar el contador de auto-slide al interactuar
 });
 
 // Finalizar arrastre
@@ -80,3 +84,26 @@ carruselWrapper.addEventListener('mouseleave', () => {
 });
 carruselWrapper.addEventListener('mousemove', dragMove);
 carruselWrapper.addEventListener('touchmove', dragMove);
+
+// Función para iniciar el auto-deslizado cada 20 segundos
+function startAutoSlide() {
+    if (!isMobile()) return; // Solo funciona en pantallas pequeñas
+    autoSlideTimer = setInterval(() => {
+        if (!isDragging) {
+            currentIndex = (currentIndex + 1) % totalItems; // Avanzar al siguiente slide
+            setPosition();
+            updateIndicators();
+        }
+    }, 7000); // 20000 milisegundos = 20 segundos
+}
+
+// Función para reiniciar el contador del auto-deslizado
+function resetAutoSlideTimer() {
+    clearInterval(autoSlideTimer); // Detener el temporizador actual
+    startAutoSlide(); // Volver a iniciar el temporizador
+}
+
+// Iniciar el temporizador de auto-slide al cargar la página
+if (isMobile()) {
+    startAutoSlide();
+}
