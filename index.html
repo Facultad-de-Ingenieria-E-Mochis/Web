@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facultad de ingenieria Los mochis</title>
+    <title>Header Diseño</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -63,31 +63,51 @@
         </div>
     </div>    
     <section class="noticias">
-        <h1 class="title-secion">Noticias</h1>
-        <div class="noticia">
-            <img src="Assets/uastorre.jpg" alt="Imagen Noticia 1">
-            <div class="tema">UAS</div>
-            <h3>UAS invita a programa de becas de movilidad internacional</h2>
-            <a href="#" class="ver-mas">Ver más</a>
-        </div>
-
-        <div class="noticia">
-            <img src="Assets/dengue.jpg" alt="Imagen Noticia 2">
-            <div class="tema">Dengue</div>
-            <h3>La UAS profundiza estudio sobre el dengue</h2>
-            <a href="#" class="ver-mas">Ver más</a>
-        </div>
-
-        <div class="noticia">
-            <img src="Assets/conferencia.jpg" alt="Imagen Noticia 3">
-            <div class="tema">Los mochis</div>
-            <h3>La universidad Autonoma de Sinaloa lanza el podcast eductivo "Acceso y Derecho"</h2>
-            <a href="#" class="ver-mas">Ver más</a>
-        </div>
-        <div class="button-container">
-            <a href="#" class="yellow-button">Ver todas las noticias</a>
-        </div>
+      <h1 class="title-secion">Noticias</h1>
+      <!-- Contenedor del carrusel -->
+      <div class="carrusel-wrapper">
+          <div class="carrusel-item">
+              <img src="Assets/uastorre.jpg" alt="Imagen Noticia 1">
+              <div class="tema">UAS</div>
+              <h3>UAS invita a programa de becas de movilidad internacional</h3>
+              <div class="btn-ver">
+                <a href="#" class="ver-mas">Ver más</a>
+              </div>
+          </div>
+  
+          <div class="carrusel-item">
+              <img src="Assets/dengue.jpg" alt="Imagen Noticia 2">
+              <div class="tema">Dengue</div>
+              <h3>La UAS profundiza estudio sobre el dengue</h3>
+              <div class="btn-ver">
+                <a href="#" class="ver-mas">Ver más</a>
+              </div>
+          </div>
+  
+          <div class="carrusel-item">
+              <img src="Assets/conferencia.jpg" alt="Imagen Noticia 3">
+              <div class="tema">Los Mochis</div>
+              <h3>La Universidad Autónoma de Sinaloa lanza el podcast educativo "Acceso y Derecho"</h3>
+              <div class="btn-ver">
+                <a href="#" class="ver-mas">Ver más</a>
+              </div>
+          </div>
+      </div>  
+      <!-- Indicadores (con íconos Font Awesome) -->
+      <div class="indicators">
+          <i class="fa-solid fa-circle active" data-index="0"></i>
+          <i class="fa-regular fa-circle" data-index="1"></i>
+          <i class="fa-regular fa-circle" data-index="2"></i>
+      </div>
+  
+      <!-- Botón para pantallas grandes (opcional) -->
+      <div class="button-container">
+          <a href="#" class="yellow-button">Ver todas las noticias</a>
+      </div>
     </section>
+  
+  
+  
 
     <section class="tutorias">
         <h1 class="title-secion">Tutorias</h1>
@@ -181,8 +201,7 @@
         <img src="Assets/CuadroconFondoUASCorrecto.png" alt="Logo principal" class="footer-logo">
         <div class="footer-center">Sursum Versus</div>
         <img src="Assets/CuadroconFondo2025.png" alt="Logo UAS" class="footer-logo">
-      </footer>      
-      
-    
-</body>
+      </footer>            
+      <script src="script.js"></script>
+  </body>
 </html>
