@@ -94,7 +94,7 @@ function startAutoSlide() {
             setPosition();
             updateIndicators();
         }
-    }, 7000); // 20000 milisegundos = 20 segundos
+    }, 7000); //  7 segundos
 }
 
 // Función para reiniciar el contador del auto-deslizado
