@@ -370,7 +370,7 @@ body {
 .servicios {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     padding: 0 5%; /* Margen del 10% en los lados */
   }
@@ -423,82 +423,77 @@ body {
 
   
 
-  /* Sección de información */
 /* Sección de información */
 .info {
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos de forma uniforme */
-    align-items: flex-start; /* Alinea los elementos desde la parte superior */
     gap: 20px;
-    padding: 40px 5%;
-    flex-wrap: wrap; /* Ajusta elementos en varias filas si el ancho no es suficiente */
-    text-align: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+    border-radius: 10px;
+    margin: 5%;
   }
   
-  /* Estilo para los items dentro de .info */
-  .info-item {
-    flex: 1; /* Permite que los elementos se distribuyan uniformemente */
-    max-width: 33%; /* Limita el ancho de cada columna */
+  /* Mapa */
+  .iframe-container {
+    flex: 2; /* Ocupa más espacio que los detalles */
+    min-width: 300px; /* Asegura que el mapa no sea demasiado pequeño */
+    height: 300px; /* Ajusta según necesidad */
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+  }
+  
+  /* Detalles de dirección y contacto */
+  .info-details {
+    flex: 3; /* Ocupa más espacio para el texto */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Espaciado entre el título, icono y contenido */
-  }
-  
-  /* Títulos uniformes */
-  .info-item h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 25px;
-    min-height: 40px; /* Asegura que todos los títulos tengan la misma altura */
-  }
-  
-  /* Contenido de íconos y texto */
-  .info-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 20px;
     justify-content: center;
-    gap: 15px;
   }
   
-  .info-content i {
-    font-size: 65px; /* Tamaño más grande para los íconos */
-    color: #000;
+  .info-item {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Asegura que los elementos estén apilados (icono + texto) */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
   }
   
-  .info-content p {
-    font-size: 20px;
-    color: #000;
+  .info-item h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .info-item p {
+    font-size: 18px;
+    color: #555;
     margin: 0;
+    line-height: 1.5;
   }
   
   /* Media query para pantallas pequeñas */
   @media (max-width: 768px) {
-    /* Cambiar el comportamiento de los items */
-    .info-item {
-      max-width: 100%; /* Hace que los elementos ocupen todo el ancho */
-    }
-  
-    /* Asegura que el div con el iframe ocupe el espacio disponible */
-    .info-item.iframe-container {
-      flex-grow: 1; /* Hace que el div del iframe ocupe el espacio restante */
-    }
-  
-    /* Asegura que el iframe ocupe el 100% del ancho */
-    .info-item iframe {
-      width: 100%;
-      height: auto; /* Ajusta la altura según lo necesites */
-    }
-    .info-content i {
-        font-size: 50px; /* Tamaño más grande para los íconos */
-      }
-      
-      .info-content p {
-        font-size: 16px;
-      }
 
+    .info {
+        height: auto; /* Asegúrate de que no tenga una altura fija */
+      }
+    .iframe-container {
+      height: 350px !important;
+      background-color: red;
+    }
+  
+    .info-details {
+      text-align: center; /* Centra el texto */
+    }
+  
+    .info-item h2 {
+      justify-content: center;
+    }
   }
+  
   
 
 
@@ -684,7 +679,7 @@ body {
     }
 
     .carrusel-item img {
-        width:97%;
+        width:100%;
         max-height: 200px;
         border-radius: 10px;
         
@@ -744,10 +739,42 @@ body {
     .logo-container .header-title {
         font-size: 1.2em;
         font-weight: 500;
+        text-align: center;
+
     }
     .icons-servicio {
         flex-direction: row !important;
+        display: grid;
+        grid-template-columns: 1fr 6fr; /* Crea 2 columnas de tamaño igual */
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        background: linear-gradient(to left, #1d71b8, #003595); /* Degradado de rojo a azul */
 
+      }
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        height: 100px;
+        color: white;
+        box-shadow: none;
+    
+      }
+      .card i{
+        font-size: 55px;
+    
+      }
+      .icons-servicio p {
+        font-size: 1.3em;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+      }
+      .icons-container{
+        align-content: space-between;
+        text-align: center;
       }
 
     .banner{
@@ -784,6 +811,52 @@ body {
         width: 110px;
         height: auto;
     }
+
+
+
+    .redes-sociales {
+        text-align: center;
+        padding: 40px 5%;
+        margin-bottom: 50px;
+      }
+      .redes-sociales h1{
+        display: none;
+      }
+
+      
+      .title-secion {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      
+      .iconos-redes {
+        display: flex;
+        justify-content: center; /* Asegura que los íconos estén distribuidos */
+        gap: 5px;
+        flex-wrap: nowrap; /* Permite que los íconos bajen en pantallas más pequeñas */
+      }
+      
+      .red-item {
+
+        width: 75px; /* Tamaño uniforme de cada bloque */
+        height: 90px;
+        box-shadow: none; /* Sombra ligera */
+        background-color: transparent;
+      }
+      
+      /* Estilo de íconos con colores característicos */
+      .red-item i {
+        font-size: 55px; /* Tamaño grande para los íconos */
+        margin-bottom: 10px;
+      }
+
+      .red-item p {
+        font-size: 0.9em;
+      }
+
+      
+      /* Estilo del texto debajo del ícono */
         
 }
 
