@@ -1,893 +1,846 @@
 /* Estilos generales */
 body {
-    font-family: 'Roboto Condensed',Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    height: 100vh;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  height: 100vh;
 }
-.uas-title2{
-    display: none;
+.uas-title2 {
+  display: none;
 }
 
 /* Contenedor del header */
 .header-container {
-    display: grid;
-    grid-template-columns: 2fr  2fr;
-    align-items:flex-start; /* Centra verticalmente */
-    background-color: #0056A8; /* Azul del header */
-    background: linear-gradient(to right, #1d71b8, #003595); /* Degradado de rojo a azul */
-    color: white;
-    height: 120px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: flex-start; /* Centra verticalmente */
+  background-color: #0056a8; /* Azul del header */
+  background: linear-gradient(
+    to right,
+    #1d71b8,
+    #003595
+  ); /* Degradado de rojo a azul */
+  color: white;
+  height: 120px;
 }
-
 
 /* Logo principal y título */
 .logo-container {
-    display: flex;
-    height: 100%;
-    justify-content: flex-start;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
 }
-.logo-img{
-    display: flex;
-    padding-left: 15%;
-
+.logo-img {
+  display: flex;
+  padding-left: 15%;
 }
 /* Logo principal y título */
 .title-container {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    height: 120px;
-    cursor: default;
-
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  height: 120px;
+  cursor: default;
 }
 
 .logo-container .header-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0;
-    text-transform: uppercase;
-    
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
 }
-.logo-container img{
-    width: 170px;
-    height: 150px;
+.logo-container img {
+  width: 170px;
+  height: 150px;
 }
 
 /* Logos secundarios */
 .secondary-logos {
-    margin-top: 4px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 120px;
-
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 120px;
 }
-.logo2{
-    padding-right: 15%;
-}
-
-.secondary-logos img{
-    width: 170px;
-    height: 120px;
+.logo2 {
+  padding-right: 15%;
 }
 
+.secondary-logos img {
+  width: 170px;
+  height: 120px;
+}
 
 .uni-container {
-    height: auto; /* Permitir que la altura se ajuste al contenido */
-    padding: 0 0; /* Añadir espacio para que el texto no quede tan ajustado */
-    display: flex; /* Usar flex para centrar */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    text-align: center; /* Asegurar el centrado del texto */
-    background: linear-gradient(to left, #1d71b8, #003595); /* Degradado de rojo a azul */
-    height: 30px;
+  height: auto; /* Permitir que la altura se ajuste al contenido */
+  padding: 0 0; /* Añadir espacio para que el texto no quede tan ajustado */
+  display: flex; /* Usar flex para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center; /* Asegurar el centrado del texto */
+  background: linear-gradient(
+    to left,
+    #1d71b8,
+    #003595
+  ); /* Degradado de rojo a azul */
+  height: 30px;
 }
 
 .uni-title h4 {
-    margin: 0; /* Eliminar márgenes por defecto del h3 */
-    font-size: 16px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
-    color: rgba(255, 255, 255, 0.5); /* Rojo semitransparente */
-    font-weight: 300;
-    cursor: default;
+  margin: 0; /* Eliminar márgenes por defecto del h3 */
+  font-size: 16px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+  color: rgba(255, 255, 255, 0.5); /* Rojo semitransparente */
+  font-weight: 300;
+  cursor: default;
 }
 .uni-title h3 {
-    margin: 0; /* Eliminar márgenes por defecto del h3 */
-    font-size: 16px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
-    color: rgba(255, 255, 255, 0.5); /* Rojo semitransparente */
-    font-weight: 300;
-    cursor: default;
+  margin: 0; /* Eliminar márgenes por defecto del h3 */
+  font-size: 16px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+  color: rgba(255, 255, 255, 0.5); /* Rojo semitransparente */
+  font-weight: 300;
+  cursor: default;
 }
-.menu-container{
-    height: auto; /* Permitir que la altura se ajuste al contenido */
-    padding: 0 0; /* Añadir espacio para que el texto no quede tan ajustado */
-    display: flex; /* Usar flex para centrar */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    text-align: center; /* Asegurar el centrado del texto */
-    background-color: #b89d2b;
-    height: 40px;
+.menu-container {
+  height: auto; /* Permitir que la altura se ajuste al contenido */
+  padding: 0 0; /* Añadir espacio para que el texto no quede tan ajustado */
+  display: flex; /* Usar flex para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center; /* Asegurar el centrado del texto */
+  background-color: #b89d2b;
+  height: 40px;
 }
-.nav{
-    display: grid;
-    height: 40px;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    text-align: center; /* Asegurar el centrado del texto */
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+.nav {
+  display: grid;
+  height: 40px;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center; /* Asegurar el centrado del texto */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .nav a {
-    display: flex; /* Cambiar a flex para usar align-items y justify-content */
-    height: 40px;
-    width: 190px;
-    text-decoration: none;
-    color: white;
-    border-left: 1px solid white; /* Borde izquierdo para todos los enlaces */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    text-align: center; /* Asegurar el centrado del texto */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  display: flex; /* Cambiar a flex para usar align-items y justify-content */
+  height: 40px;
+  width: 190px;
+  text-decoration: none;
+  color: white;
+  border-left: 1px solid white; /* Borde izquierdo para todos los enlaces */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center; /* Asegurar el centrado del texto */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 
 .nav a.inicio {
-    border-left: none !important; /* Eliminar borde izquierdo para el enlace con clase 'inicio' */
+  border-left: none !important; /* Eliminar borde izquierdo para el enlace con clase 'inicio' */
 }
 
 .nav a:hover {
-    background-color: #cb9700; /* Color de fondo más intenso */
-    color: white;
+  background-color: #cb9700; /* Color de fondo más intenso */
+  color: white;
 }
-
-
-
-
-
-
-
-
-
+.menu-burguer {
+  display: none;
+}
 
 /* Estilo básico para el banner */
 .banner {
-    margin-top: 2px;
-    width: 100%;
-    height: 300px;
-    background-image: url('Assets/banner.jpeg'); /* Imagen de fondo */
-    background-size: cover; /* La imagen cubre todo el área */
-    background-position: left; /* Alinea la imagen a la izquierda */
-    position: relative;
+  margin-top: 2px;
+  width: 100%;
+  height: 300px;
+  background-image: url('Assets/banner.jpeg'); /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre todo el área */
+  background-position: left; /* Alinea la imagen a la izquierda */
+  position: relative;
 }
 
 /* Espacio para escribir a la izquierda */
 .texto {
-    color: white;
-    width: 45%; /* Ajusta el ancho del espacio azul */
-    padding-top: 20px;
-    padding-left: 20px;
+  color: white;
+  width: 45%; /* Ajusta el ancho del espacio azul */
+  padding-top: 20px;
+  padding-left: 20px;
 
-    position: absolute;
-    left: 0; /* Coloca el espacio azul en la parte izquierda */
-    height: 100%; /* Asegura que ocupe toda la altura del banner */
+  position: absolute;
+  left: 0; /* Coloca el espacio azul en la parte izquierda */
+  height: 100%; /* Asegura que ocupe toda la altura del banner */
 }
-.texto h1{
-    margin: 0;
-    padding: 0;
+.texto h1 {
+  margin: 0;
+  padding: 0;
 }
-.texto h2{
-    margin: 0;
-    padding: 0;
-    color: #cb9700;
-    text-decoration: underline ;
-}
-
-.texto p{
-    margin-left: 40px;
-    padding: 10px;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
+.texto h2 {
+  margin: 0;
+  padding: 0;
+  color: #cb9700;
+  text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.texto p {
+  margin-left: 40px;
+  padding: 10px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
 /* Contenedor principal de las noticias */
 .noticias {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 20px;
-    gap: 20px; /* Espacio entre las noticias */
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  gap: 20px; /* Espacio entre las noticias */
 }
 
 /* Título de noticias */
 .title-secion {
-    text-align: left;
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 25px;
-    grid-column: span 3; /* Hace que el título ocupe todo el ancho (3 columnas) */
+  text-align: left;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 25px;
+  grid-column: span 3; /* Hace que el título ocupe todo el ancho (3 columnas) */
 }
 
 /* Estilo para cada noticia */
 
-
 @media (min-width: 768px) {
-    .carrusel-wrapper{
-        width: 100%;
-        margin: 0 auto;
-        padding-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de tamaño igual */
-        gap: 20px; /* Espacio entre las noticias */        
-    }
-    .carrusel-item {
-        background-color: #fff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        border-radius: 8px;
-        text-align: left; /* Centra el contenido y ajusta los elementos al lado izquierdo */
-        position: relative; /* Necesario para el posicionamiento absoluto del botón */
-    }
-    
-    /* Imagen de la noticia */
-    .carrusel-item img {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-    }
-    
-    /* Tema de la noticia (sin fondo, color azul) */
-    .tema {
-        color: #007bff; /* Color azul */
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 0.9em;
-    }
-    
-    /* Título de la noticia (alineado a la izquierda) */
-    .carrusel-item h3 {
-        font-size: 1.4em;
-        color: #333;
-        margin-bottom: 20px;
-        text-align: left; /* Alinea el título de la noticia a la izquierda */
-    }
-    
-    /* Botón "Ver más" */
-
-}
-    .ver-mas {
-        color: #b89d2b;
-        display: inline-block;
-        padding: 10px 15px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        margin-top: 10px;
-        position: absolute; /* Hace que el botón se posicione dentro de la tarjeta */
-        bottom: 15px; /* Lo coloca en la parte inferior */
-        right: 0; /* Lo alinea a la derecha */
-        width: auto; /* El tamaño del botón se ajustará al texto */
-    }
-
-
-
-/* Contenedor para alinear el botón a la derecha */
-.button-container {
-    grid-column: 3 / 4; /* Posiciona el botón en la última columna */
-    justify-self: end; /* Alinea el botón a la derecha dentro de su celda */
-    align-self: center; /* Alinea verticalmente el botón al centro */
-  }
-  
-  /* Estilos del botón */
-  .yellow-button {
-    background-color: #b89d2b; /* Color amarillo */
-    color: white; /* Texto blanco */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negritas */
-    text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Para que se comporte como botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre él */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación */
-    margin: 10px; /* Espaciado adicional */
-  }
-  
-  .yellow-button:hover {
-    background-color: #ccae26; /* Color amarillo más oscuro al pasar el mouse */
-    transform: translateY(-2px); /* Efecto de elevación */
-  }
-  
-.yellow-button:active {
-    background-color: #FF8F00; /* Color más oscuro al hacer clic */
-    transform: translateY(0); /* Vuelve a la posición inicial */
-  }
-
-.indicators{
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tutorias {
-    width: 95%;
+  .carrusel-wrapper {
+    width: 100%;
     margin: 0 auto;
     padding-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Crea 2 columnas de tamaño igual */
-    gap: 0px; /* Espacio entre las columnas */
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de tamaño igual */
+    gap: 20px; /* Espacio entre las noticias */
+  }
+  .carrusel-item {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left; /* Centra el contenido y ajusta los elementos al lado izquierdo */
+    position: relative; /* Necesario para el posicionamiento absoluto del botón */
+  }
+
+  /* Imagen de la noticia */
+  .carrusel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  /* Tema de la noticia (sin fondo, color azul) */
+  .tema {
+    color: #007bff; /* Color azul */
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+
+  /* Título de la noticia (alineado a la izquierda) */
+  .carrusel-item h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left; /* Alinea el título de la noticia a la izquierda */
+  }
+
+  /* Botón "Ver más" */
+}
+.ver-mas {
+  color: #b89d2b;
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: absolute; /* Hace que el botón se posicione dentro de la tarjeta */
+  bottom: 15px; /* Lo coloca en la parte inferior */
+  right: 0; /* Lo alinea a la derecha */
+  width: auto; /* El tamaño del botón se ajustará al texto */
+}
+
+/* Contenedor para alinear el botón a la derecha */
+.button-container {
+  grid-column: 3 / 4; /* Posiciona el botón en la última columna */
+  justify-self: end; /* Alinea el botón a la derecha dentro de su celda */
+  align-self: center; /* Alinea verticalmente el botón al centro */
+}
+
+/* Estilos del botón */
+.yellow-button {
+  background-color: #b89d2b; /* Color amarillo */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negritas */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Para que se comporte como botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre él */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación */
+  margin: 10px; /* Espaciado adicional */
+}
+
+.yellow-button:hover {
+  background-color: #ccae26; /* Color amarillo más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.yellow-button:active {
+  background-color: #ff8f00; /* Color más oscuro al hacer clic */
+  transform: translateY(0); /* Vuelve a la posición inicial */
+}
+
+.indicators {
+  display: none;
+}
+
+.tutorias {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Crea 2 columnas de tamaño igual */
+  gap: 0px; /* Espacio entre las columnas */
 }
 
 .tutorias-img {
-    width: 100%; /* Ocupa el ancho total del contenedor */
-    height: auto; /* Mantiene las proporciones de la imagen */
-    box-sizing: border-box; /* Incluye los márgenes en el ancho total */
-    padding: 5%; /* Margen interno proporcional al contenedor */
+  width: 100%; /* Ocupa el ancho total del contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  box-sizing: border-box; /* Incluye los márgenes en el ancho total */
+  padding: 5%; /* Margen interno proporcional al contenedor */
 }
 
 .tutorias-img img {
-    width: 100%; /* Asegura que la imagen no se desborde */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Elimina el espacio extra en imágenes inline */
-    border-radius: 10px; /* Opcional: da bordes redondeados a la imagen */
+  width: 100%; /* Asegura que la imagen no se desborde */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Elimina el espacio extra en imágenes inline */
+  border-radius: 10px; /* Opcional: da bordes redondeados a la imagen */
 }
-.tutorias h1{
-    margin-left: 2.6%;
+.tutorias h1 {
+  margin-left: 2.6%;
 }
-
-
-
-
-
-
 
 /* Contenedor principal */
 .servicios {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 0 5%; /* Margen del 10% en los lados */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 5%; /* Margen del 10% en los lados */
+}
+
+/* Contenedor para las tarjetas */
+.icons-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye uniformemente las tarjetas */
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Abarca todo el ancho disponible */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
+}
+
+/* Estilo de cada servicio */
+.icons-servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-color: #0078d4;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Iconos más grandes */
+.card i {
+  font-size: 60px;
+}
+
+/* Texto debajo de las tarjetas */
+.icons-servicio p {
+  font-size: 1.5em;
+  color: #000; /* Cambia el texto a negro */
+  margin: 0;
+}
+
+/* Sección de información */
+.info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+  border-radius: 10px;
+  margin: 5%;
+}
+
+/* Mapa */
+.iframe-container {
+  flex: 2; /* Ocupa más espacio que los detalles */
+  min-width: 300px; /* Asegura que el mapa no sea demasiado pequeño */
+  height: 300px; /* Ajusta según necesidad */
+  border-radius: 10px;
+  overflow: hidden; /* Asegura que el contenido no sobresalga */
+}
+
+/* Detalles de dirección y contacto */
+.info-details {
+  flex: 3; /* Ocupa más espacio para el texto */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.info-item {
+  display: flex; /* Activa Flexbox */
+  flex-direction: column; /* Asegura que los elementos estén apilados (icono + texto) */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto */
+}
+
+.info-item h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-item p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .info {
+    height: auto; /* Asegúrate de que no tenga una altura fija */
   }
-  
-  
-  /* Contenedor para las tarjetas */
-  .icons-container {
-    display: flex;
-    justify-content: space-between; /* Distribuye uniformemente las tarjetas */
-    align-items: center;
-    gap: 20px;
-    width: 100%; /* Abarca todo el ancho disponible */
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
+  .iframe-container {
+    height: 350px !important;
+    background-color: red;
   }
-  
-  /* Estilo de cada servicio */
-  .icons-servicio {
+
+  .info-details {
+    text-align: center; /* Centra el texto */
+  }
+
+  .info-item h2 {
+    justify-content: center;
+  }
+}
+
+/* Sección de redes sociales */
+.redes-sociales {
+  text-align: center;
+  padding: 40px 5%;
+  margin-bottom: 50px;
+}
+
+.title-secion {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: space-between; /* Asegura que los íconos estén distribuidos */
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que los íconos bajen en pantallas más pequeñas */
+}
+
+.red-item {
+  background-color: #f4f4f4; /* Color de fondo gris claro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Tamaño uniforme de cada bloque */
+  height: 150px;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilo de íconos con colores característicos */
+.red-item i {
+  font-size: 50px; /* Tamaño grande para los íconos */
+  margin-bottom: 10px;
+}
+
+/* Colores específicos para cada ícono */
+.fa-facebook {
+  color: #1877f2; /* Azul de Facebook */
+}
+
+.fa-instagram {
+  color: #e1306c; /* Degradado de Instagram */
+  background: linear-gradient(45deg, #fdc468, #df4996, #8a3ab9, #4c68d7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-youtube {
+  color: #ff0000; /* Rojo de YouTube */
+}
+
+.fa-x-twitter {
+  color: #000; /* Negro para Twitter/X */
+}
+
+/* Estilo del texto debajo del ícono */
+.red-item p {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer {
+  background-color: #f1ebd5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 0;
+}
+
+.footer-logo {
+  height: 60px;
+}
+
+.footer-center {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 1351px) {
+  .uni-title h4 {
+    font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+  }
+}
+
+@media (max-width: 1235px) {
+  .nav a {
+    width: 120px;
+  }
+
+  .uni-title {
+    padding-left: 10%;
+  }
+  .logo-img {
+    padding-left: 0;
+  }
+  .logo2 {
+    padding-right: 0;
+  }
+  .uas-title {
+    display: none;
+  }
+  .uas-title2 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    visibility: visible;
+  }
+  .texto h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 894px) {
+  .logo-container .header-title {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+  .title-container {
+    margin-left: 5px;
+  }
+  .uni-title h3 {
+    font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+    font-weight: 400;
+  }
+  .texto p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    display: none;
+  }
+  .menu-burguer {
+    position: relative; /* Necesario para posicionar el ícono relativo a este contenedor */
+    width: 100%; /* Ajusta el ancho según necesites */
+    display: flex; /* Para centrar contenido dentro del contenedor */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+  }
+
+  .menu-burguer i {
+    position: absolute; /* Permite mover el ícono fuera del contenedor */
+    top: -100px; /* Lo coloca 20px por encima del contenedor */
+    font-size: 50px; /* Ajusta el tamaño del ícono */
+    color: #dcccb4; /* Cambia el color del ícono */
+  }
+
+  .title-container {
+    display: flex;
+    position: absolute;
+    top: 130px; /* Altura desde la parte superior */
+    left: 50%; /* Lleva el contenedor al centro horizontal */
+    transform: translateX(-50%); /* Ajusta el punto de referencia al centro */
     text-align: center;
+    padding: 0px 0px; /* Opcional: añade un margen interno */
+    justify-content: center; /* Centra el contenido dentro del contenedor */
+    align-items: center; /* Centra verticalmente el contenido (si es necesario) */
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 75%;
   }
-  
+  .header-title br {
+    display: none; /* Oculta el <br /> */
+  }
+
+  .header-container {
+    height: 50px;
+    width: 100%;
+    background: #b89d2b;
+    display: flex;
+    justify-content: center;
+  }
+  .secondary-logos {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: auto;
+  }
+  .secondary-logos img {
+    width: 110px;
+    height: 80px;
+  }
+  .logo-container {
+    height: 101px;
+  }
+  .logo-container img {
+    width: 110px;
+    height: 100px;
+  }
+
+  .uni-container {
+    height: 320px;
+  }
+
+  .noticias {
+    overflow: hidden;
+    display: block; /* Cambiar de grid a block para apilar los elementos */
+    box-sizing: border-box; /* Aseguramos que el padding y el border no afecten el ancho */
+  }
+  .carrusel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  .carrusel-item {
+    min-width: 95%;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+  }
+
+  .carrusel-item img {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+  }
+  .carrusel-item h3 {
+    text-align: justify;
+    padding: 0px 10px 0px 10px;
+
+    height: 50px;
+  }
+  .btn-ver {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 0px;
+  }
+  .carrusel-item a {
+    width: 25%;
+    height: 35px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    top: -137px;
+    right: 6px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px #777777, -1px -1px 2px #777777; /* Contorno blanco estático */
+  }
+
+  .indicators {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #ffffff;
+    position: relative; /* Esto permite mover el elemento sin afectar a otros elementos */
+    top: -120px; /* Desplaza el elemento hacia arriba 100px */
+    font-size: 12px;
+  }
+  .indicators i {
+    margin-left: 4px;
+  }
+
+  .tema {
+    display: none;
+  }
+  .button-container a {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .icons-servicio {
+    flex-direction: row !important;
+    display: grid;
+    grid-template-columns: 1fr 6fr; /* Crea 2 columnas de tamaño igual */
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    background: linear-gradient(
+      to left,
+      #1d71b8,
+      #003595
+    ); /* Degradado de rojo a azul */
+  }
   .card {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
-    background-color: #0078d4;
+    background-color: transparent;
+    height: 100px;
     color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+    box-shadow: none;
   }
-  
-  /* Iconos más grandes */
   .card i {
-    font-size: 60px;
-
+    font-size: 55px;
   }
-  
-  /* Texto debajo de las tarjetas */
   .icons-servicio p {
-    font-size: 1.5em;
-    color: #000; /* Cambia el texto a negro */
-    margin: 0;
+    font-size: 1.3em;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+  }
+  .icons-container {
+    align-content: space-between;
+    text-align: center;
   }
 
-  
+  .uni-title h3 {
+    display: none;
+  }
 
-/* Sección de información */
-.info {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
-    border-radius: 10px;
-    margin: 5%;
+  .menu-container {
+    display: none;
   }
-  
-  /* Mapa */
-  .iframe-container {
-    flex: 2; /* Ocupa más espacio que los detalles */
-    min-width: 300px; /* Asegura que el mapa no sea demasiado pequeño */
-    height: 300px; /* Ajusta según necesidad */
-    border-radius: 10px;
-    overflow: hidden; /* Asegura que el contenido no sobresalga */
-  }
-  
-  /* Detalles de dirección y contacto */
-  .info-details {
-    flex: 3; /* Ocupa más espacio para el texto */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .info-item {
-    display: flex; /* Activa Flexbox */
-    flex-direction: column; /* Asegura que los elementos estén apilados (icono + texto) */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto */
-  }
-  
-  .info-item h2 {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .info-item p {
-    font-size: 18px;
-    color: #555;
-    margin: 0;
-    line-height: 1.5;
-  }
-  
-  /* Media query para pantallas pequeñas */
-  @media (max-width: 768px) {
 
-    .info {
-        height: auto; /* Asegúrate de que no tenga una altura fija */
-      }
-    .iframe-container {
-      height: 350px !important;
-      background-color: red;
-    }
-  
-    .info-details {
-      text-align: center; /* Centra el texto */
-    }
-  
-    .info-item h2 {
-      justify-content: center;
-    }
+  .tutorias {
+    grid-template-columns: 1fr; /* Crea 2 columnas de tamaño igual */
+    width: 100%;
+    display: block; /* Cambiar de grid a block para apilar los elementos */
   }
-  
-  
+  .tutorias h1 {
+    font-size: 1.7em; /* Tamaño más pequeño */
+    text-align: start; /* Centrado para móviles */
+    margin-left: 5%;
+  }
 
-
-
-  /* Sección de redes sociales */
-.redes-sociales {
+  .redes-sociales {
     text-align: center;
     padding: 40px 5%;
     margin-bottom: 50px;
   }
-  
+  .redes-sociales h1 {
+    display: none;
+  }
+
   .title-secion {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #000;
   }
-  
+
   .iconos-redes {
     display: flex;
-    justify-content: space-between; /* Asegura que los íconos estén distribuidos */
-    gap: 20px;
-    flex-wrap: wrap; /* Permite que los íconos bajen en pantallas más pequeñas */
+    justify-content: center; /* Asegura que los íconos estén distribuidos */
+    gap: 5px;
+    flex-wrap: nowrap; /* Permite que los íconos bajen en pantallas más pequeñas */
   }
-  
+
   .red-item {
-    background-color: #f4f4f4; /* Color de fondo gris claro */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 150px; /* Tamaño uniforme de cada bloque */
-    height: 150px;
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 75px; /* Tamaño uniforme de cada bloque */
+    height: 90px;
+    box-shadow: none; /* Sombra ligera */
+    background-color: transparent;
   }
-  
+
   /* Estilo de íconos con colores característicos */
   .red-item i {
-    font-size: 50px; /* Tamaño grande para los íconos */
+    font-size: 55px; /* Tamaño grande para los íconos */
     margin-bottom: 10px;
   }
-  
-  /* Colores específicos para cada ícono */
-  .fa-facebook {
-    color: #1877f2; /* Azul de Facebook */
-  }
-  
-  .fa-instagram {
-    color: #e1306c; /* Degradado de Instagram */
-    background: linear-gradient(45deg, #fdc468, #df4996, #8a3ab9, #4c68d7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .fa-youtube {
-    color: #ff0000; /* Rojo de YouTube */
-  }
-  
-  .fa-x-twitter {
-    color: #000; /* Negro para Twitter/X */
-  }
-  
-  /* Estilo del texto debajo del ícono */
+
   .red-item p {
-    font-size: 16px;
-    color: #000;
-    font-weight: bold;
-    margin: 0;
+    font-size: 0.9em;
   }
-  
-  footer {
-    background-color: #f1ebd5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 0 0;
+
+  /* Estilo del texto debajo del ícono */
+}
+
+@media (max-width: 460px) {
+  .menu-burguer i {
+    top: -80px; /* Lo coloca 20px por encima del contenedor */
   }
-  
-  .footer-logo {
-    height: 60px;
+  .uni-container {
+    height: 260px;
   }
-  
-  .footer-center {
-    flex-grow: 1;
-    text-align: center;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: bold;
-    color: #333;
+
+  .title-container {
+    font-size: 1.4em;
+    width: 80%;
+    top: 110px; /* Altura desde la parte superior */
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-@media (max-width: 1351px) {
-    .uni-title h4 {
-        font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
-    }  
 }
 
-@media (max-width: 1235px) {
-
-    .nav a {
-        width: 120px;
-
-    }
-    
-    .uni-title{
-        padding-left: 10%;
-    }
-    .logo-img{
-        padding-left: 0;
-    }
-    .logo2{
-        padding-right: 0;
-    }
-    .uas-title{
-        display: none;
-    }
-    .uas-title2{
-        display: flex;
-        visibility: visible;
-
-    }
-    .texto h1{
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 894px) {
-    .logo-container .header-title {
-        font-size: 1.3em;
-        font-weight: 700;
-    }
-    .title-container{
-        margin-left: 5px;
-    }
-    .uni-title h3 {
-        font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
-        font-weight: 400;
-    }
-    .texto p{
-        font-size: 15px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .noticias {
-        overflow: hidden;
-        display: block; /* Cambiar de grid a block para apilar los elementos */
-        box-sizing: border-box; /* Aseguramos que el padding y el border no afecten el ancho */
-        
-    }
-    .carrusel-wrapper {
-        display: flex;
-        transition: transform 0.5s ease;
-        width: 100%;
-        
-    }
-    .carrusel-item {
-        min-width: 95%;
-        text-align: center;
-        padding: 0px 10px 0px 10px;
-
-    }
-
-    .carrusel-item img {
-        width:100%;
-        max-height: 200px;
-        border-radius: 10px;
-        
-    }
-    .carrusel-item h3 {
-        text-align: justify;
-        padding: 0px 10px 0px 10px;
-
-        height: 50px;    
-    
-    }
-    .btn-ver{
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        height: 0px;
-    }
-    .carrusel-item a {
-        width: 25%;
-        height: 35px;
-        display: flex;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        top: -137px;
-        right: 6px;
-        border-radius: 10px;  
-        font-weight: bold;
-        text-align: center;
-        text-shadow: 1px 1px 1px #777777, -1px -1px 2px #777777; /* Contorno blanco estático */
-    }
-    
-    .indicators {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        color: #ffffff;
-        position: relative; /* Esto permite mover el elemento sin afectar a otros elementos */
-        top: -120px; /* Desplaza el elemento hacia arriba 100px */
-        font-size: 12px;
-    }
-    .indicators i{
-        margin-left: 4px;
-    }
-
-    
-    .tema{
-        display: none;
-    }
-    .button-container a{
-        margin: 0px;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-container .header-title {
-        font-size: 1.2em;
-        font-weight: 500;
-        text-align: center;
-
-    }
-    .icons-servicio {
-        flex-direction: row !important;
-        display: grid;
-        grid-template-columns: 1fr 6fr; /* Crea 2 columnas de tamaño igual */
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        background: linear-gradient(to left, #1d71b8, #003595); /* Degradado de rojo a azul */
-
-      }
-      .card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        height: 100px;
-        color: white;
-        box-shadow: none;
-    
-      }
-      .card i{
-        font-size: 55px;
-    
-      }
-      .icons-servicio p {
-        font-size: 1.3em;
-        text-align: center;
-        color: #fff;
-        font-weight: 700;
-      }
-      .icons-container{
-        align-content: space-between;
-        text-align: center;
-      }
-
-    .banner{
-        display: none;
-    }
-    .uni-title h3 {
-        display: none;
-    }
-
-    .menu-container{
-        display: none;
-    }
-
-
-    .tutorias {
-
-        grid-template-columns: 1fr; /* Crea 2 columnas de tamaño igual */
-        width: 100%;
-        display: block; /* Cambiar de grid a block para apilar los elementos */
-    }
-    .tutorias h1 {
-        font-size: 1.7em; /* Tamaño más pequeño */
-        text-align: start; /* Centrado para móviles */
-        margin-left: 5%;
-    }
-    .logo-container img{
-        width: 110px;
-        height: auto;
-    }
-    
-    /* Logos secundarios */
-
-    .secondary-logos img{
-        width: 110px;
-        height: auto;
-    }
-
-
-
-    .redes-sociales {
-        text-align: center;
-        padding: 40px 5%;
-        margin-bottom: 50px;
-      }
-      .redes-sociales h1{
-        display: none;
-      }
-
-      
-      .title-secion {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 30px;
-      }
-      
-      .iconos-redes {
-        display: flex;
-        justify-content: center; /* Asegura que los íconos estén distribuidos */
-        gap: 5px;
-        flex-wrap: nowrap; /* Permite que los íconos bajen en pantallas más pequeñas */
-      }
-      
-      .red-item {
-
-        width: 75px; /* Tamaño uniforme de cada bloque */
-        height: 90px;
-        box-shadow: none; /* Sombra ligera */
-        background-color: transparent;
-      }
-      
-      /* Estilo de íconos con colores característicos */
-      .red-item i {
-        font-size: 55px; /* Tamaño grande para los íconos */
-        margin-bottom: 10px;
-      }
-
-      .red-item p {
-        font-size: 0.9em;
-      }
-
-      
-      /* Estilo del texto debajo del ícono */
-        
-}
-
-
-
-
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 1rem;
-    }
-
-    .nav a {
-        font-size: 0.8rem;
-    }
-
-    .banner h1 {
-        font-size: 1.2rem;
-    }
-
-    .banner h2 {
-        font-size: 1rem;
-    }
-    .logo-container img{
-        width: 80px;
-        height: 100px;
-    }
-    
-    /* Logos secundarios */
-
-    .secondary-logos img{
-        width: 80px;
-        height: auto;
-    }
+@media (max-width: 354px) {
+  .title-container {
+    font-size: 1.3em;
+    width: 100%;
+    top: 110px; /* Altura desde la parte superior */
+  }
 }
