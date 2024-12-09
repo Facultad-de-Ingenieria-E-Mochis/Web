@@ -6,9 +6,12 @@ body {
   background-color: white;
   height: 100vh;
 }
-.uas-title2 {
-  display: none;
+body.no-scroll {
+  overflow: hidden; /* Bloquea el scroll */
+  height: 100%;
+
 }
+
 
 /* Contenedor del header */
 .header-container {
@@ -89,17 +92,23 @@ body {
 
 .uni-title h4 {
   margin: 0; /* Eliminar márgenes por defecto del h3 */
-  font-size: 16px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+  font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+  color: white; /* Rojo semitransparente */
+  font-weight: 300;
+  cursor: default;
+  padding-left: 9%;
+  letter-spacing: 25px;
+  width: 100%;
+}
+.uni-title h3 {
+  margin: 0; /* Eliminar márgenes por defecto del h3 */
+  font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
   color: rgba(255, 255, 255, 0.5); /* Rojo semitransparente */
   font-weight: 300;
   cursor: default;
 }
-.uni-title h3 {
-  margin: 0; /* Eliminar márgenes por defecto del h3 */
-  font-size: 16px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
-  color: rgba(255, 255, 255, 0.5); /* Rojo semitransparente */
-  font-weight: 300;
-  cursor: default;
+.closebtn{
+  display: none;
 }
 .menu-container {
   height: auto; /* Permitir que la altura se ajuste al contenido */
@@ -137,8 +146,8 @@ body {
 }
 
 .nav a:hover {
-  background-color: #cb9700; /* Color de fondo más intenso */
-  color: white;
+  background-color: #e0ae16; /* Color de fondo más intenso */
+  color: rgb(0, 0, 0);
 }
 .menu-burguer {
   display: none;
@@ -203,102 +212,78 @@ body {
 }
 
 /* Estilo para cada noticia */
-
-@media (min-width: 768px) {
-  .carrusel-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de tamaño igual */
-    gap: 20px; /* Espacio entre las noticias */
-  }
-  .carrusel-item {
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    text-align: left; /* Centra el contenido y ajusta los elementos al lado izquierdo */
-    position: relative; /* Necesario para el posicionamiento absoluto del botón */
-  }
-
-  /* Imagen de la noticia */
-  .carrusel-item img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-
-  /* Tema de la noticia (sin fondo, color azul) */
-  .tema {
-    color: #007bff; /* Color azul */
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-  }
-
-  /* Título de la noticia (alineado a la izquierda) */
-  .carrusel-item h3 {
-    font-size: 1.4em;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: left; /* Alinea el título de la noticia a la izquierda */
-  }
-
-  /* Botón "Ver más" */
-}
-.ver-mas {
-  color: #b89d2b;
-  display: inline-block;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 10px;
-  position: absolute; /* Hace que el botón se posicione dentro de la tarjeta */
-  bottom: 15px; /* Lo coloca en la parte inferior */
-  right: 0; /* Lo alinea a la derecha */
-  width: auto; /* El tamaño del botón se ajustará al texto */
+.texto-noticia {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  position: absolute;
+  bottom: 0; /* Comienza en la parte superior */
+  left: 0; /* Comienza en el borde izquierdo */
+  width: 100%; /* Ocupa el ancho completo */
+  height: 18%; /* Ocupa la altura completa de la imagen */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white; /* Texto en color blanco */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  flex-direction: column; /* Alinear texto en columna */
+  justify-content: center; /* Colocar texto al final (parte inferior) */
+  align-items: center; /* Centrar texto horizontalmente */
+  padding: 20px; /* Espaciado interno para el texto */
+  box-sizing: border-box; /* Incluir padding dentro del ancho y altura */
 }
 
-/* Contenedor para alinear el botón a la derecha */
-.button-container {
-  grid-column: 3 / 4; /* Posiciona el botón en la última columna */
-  justify-self: end; /* Alinea el botón a la derecha dentro de su celda */
-  align-self: center; /* Alinea verticalmente el botón al centro */
+.texto-noticia h2 {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  margin: 0;
+  font-size: 36px; /* Tamaño del título */
+  letter-spacing: 3px;
 }
 
-/* Estilos del botón */
-.yellow-button {
-  background-color: #b89d2b; /* Color amarillo */
-  color: white; /* Texto blanco */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  padding: 10px 20px; /* Espaciado interno */
-  font-size: 16px; /* Tamaño del texto */
-  font-weight: bold; /* Texto en negritas */
-  text-decoration: none; /* Sin subrayado */
-  display: inline-block; /* Para que se comporte como botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre él */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación */
-  margin: 10px; /* Espaciado adicional */
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
 }
 
-.yellow-button:hover {
-  background-color: #ccae26; /* Color amarillo más oscuro al pasar el mouse */
-  transform: translateY(-2px); /* Efecto de elevación */
+.carrusel-contenedor {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
 }
 
-.yellow-button:active {
-  background-color: #ff8f00; /* Color más oscuro al hacer clic */
-  transform: translateY(0); /* Vuelve a la posición inicial */
+.imagen {
+  min-width: 100%;
+  height: 100%;
 }
 
-.indicators {
-  display: none;
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(165, 165, 165);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 50px;
+  transform: translateY(-50%);
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 .tutorias {
@@ -430,6 +415,129 @@ body {
   line-height: 1.5;
 }
 
+.convocatorias {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 0;
+  display: flex;
+}
+
+.convocaorias-img {
+  width: 100%; /* Ocupa el ancho total del contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  box-sizing: border-box; /* Incluye los márgenes en el ancho total */
+  padding: 5%; /* Margen interno proporcional al contenedor */
+}
+
+.convocaorias-img img {
+  width: 100%; /* Asegura que la imagen no se desborde */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Elimina el espacio extra en imágenes inline */
+  border-radius: 10px; /* Opcional: da bordes redondeados a la imagen */
+}
+.convocaorias h1 {
+  margin-left: 2.6%;
+}
+/* Estilo general */
+.convocatorias body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Encabezado */
+.convocatorias header h1 {
+  font-size: 3rem;
+  text-align: left;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: grid;
+  color: #333;
+}
+/* Contenedor principal */
+.convocatorias .container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Contenedor de tarjetas */
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a una nueva fila si no caben */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 15px; /* Espacio entre las tarjetas */
+}
+
+/* Estilo de las tarjetas */
+.tarjeta {
+  flex: 0 1 calc(25% - 15px); /* Tamaño flexible para ajustar 4 tarjetas por fila */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para estilo */
+  border: 1px solid #ddd; /* Borde ligero */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: white; /* Fondo blanco */
+  overflow: hidden; /* Evita desbordes */
+  text-align: center;
+}
+
+.tarjeta img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* La imagen ocupa todo el alto del contenedor */
+  object-fit: contain; /* La imagen se ajusta dentro del contenedor sin recortarse */
+  display: block; /* Elimina el espacio extra en imágenes inline */
+  border-bottom: 1px solid #ddd; /* Línea opcional para separar la imagen del contenido */
+  border-radius: 5px; /* Redondea las esquinas */
+  background-color: #f8f8f8; /* Color de fondo para las áreas vacías (opcional) */
+}
+
+.tarjeta p {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Contenedor del botón */
+.contenedor-boton {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  margin-top: 20px; /* Espacio entre las tarjetas y el botón */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+}
+
+.boton-convocatorias .btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0056a8; /* Color azul */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Negrita para el texto */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave en hover */
+}
+
+.boton-convocatorias .btn:hover {
+  background-color: #003595; /* Color más oscuro al pasar el mouse */
+}
+/* Estilo del botón */
+.boton-centrado {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Color del botón */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-centrado:hover {
+  background-color: #0056b3; /* Color al pasar el cursor */
+}
+
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .info {
@@ -550,7 +658,7 @@ footer {
   }
 
   .uni-title {
-    padding-left: 10%;
+    padding-left: 2%;
   }
   .logo-img {
     padding-left: 0;
@@ -558,13 +666,13 @@ footer {
   .logo2 {
     padding-right: 0;
   }
-  .uas-title {
-    display: none;
+
+  .uni-title h4 {
+    font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+    letter-spacing: 16px;
+    font-weight: 400;
   }
-  .uas-title2 {
-    display: flex;
-    visibility: visible;
-  }
+
   .texto h1 {
     font-size: 1.6rem;
   }
@@ -578,9 +686,14 @@ footer {
   .title-container {
     margin-left: 5px;
   }
-  .uni-title h3 {
-    font-size: 14px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
+  .uni-title {
+    padding-left: 5%;
+  }
+  .uni-title h4{
+    font-size: 12px; /* Ajustar el tamaño del texto para que no sea demasiado grande */
     font-weight: 400;
+    letter-spacing: 12px;
+
   }
   .texto p {
     font-size: 15px;
@@ -591,6 +704,103 @@ footer {
   .banner {
     display: none;
   }
+  .uni-title{
+    display: none;
+  }
+  /* Estilo base para el contenedor */
+  /* Media query para pantallas pequeñas (celulares) */
+  @media (max-width: 768px) {
+    .menu-container {
+      position: fixed;
+      top: 0;
+      left: -100%; /* Ocultar el menú fuera de la pantalla inicialmente */
+      width: 50%; /* El menú ocupa el 50% del ancho */
+      height: 100%; /* Ocupa todo el alto de la pantalla */
+      background-color: #b89d2b; /* Mantener el fondo actual */
+      display: flex;
+      flex-direction: column; /* Organizar en columna (lista vertical) */
+      justify-content: flex-start; /* Alinear los elementos al inicio */
+      align-items: stretch; /* Asegurar que ocupen todo el ancho */
+      transition: left 0.3s ease; /* Animación suave para que el menú aparezca */
+      z-index: 1000; /* Asegurar que el menú esté por encima del contenido */
+      
+    }
+  
+    .menu-container.active {
+      left: 0 !important;
+    }
+  
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+      opacity: 0; /* Oculto inicialmente */
+      pointer-events: none; /* No se puede interactuar con él inicialmente */
+      transition: opacity 0.3s ease; /* Animación para suavizar la aparición */
+      z-index: 999; /* Justo debajo del menú */
+    }
+  
+    .overlay.active {
+      opacity: 1; /* Hacer visible el overlay */
+      pointer-events: auto; /* Permitir interacción (cerrar el menú al hacer clic) */
+    }
+  
+    .nav {
+      display: flex;
+      flex-direction: column; /* Lista vertical */
+      width: 100%; /* Asegurar que ocupe todo el ancho del menú */
+      margin-top: 30%;
+      height: 50%;
+
+
+    }
+  
+    .nav a {
+      display: block; /* Lista vertical */
+      padding: 0; /* Espaciado interno */
+      text-decoration: none;
+      text-align: center; /* Centrar el texto */
+      color: #f3f3f3; /* Texto blanco */
+      background-color: #b89d2b; /* Fondo consistente */
+      transition: background-color 0.3s, color 0.3s; /* Transición suave */
+      border-left: none !important; /* Eliminar borde izquierdo para el enlace con clase 'inicio' */
+      width: 100%;
+      padding-top: 8%;
+      font-size: large;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd; /* Línea opcional para separar la imagen del contenido */
+
+    }
+  
+    
+  
+    .nav a:hover {
+      background-color: #e0ae16; /* Fondo más intenso al pasar el mouse */
+      color: rgb(0, 0, 0); /* Texto negro */
+    }
+    .closebtn{
+      display: flex;
+      justify-content:flex-e ;
+      margin: 20px;
+      font-size: 30px; /* Ajusta el tamaño del ícono */
+      color: #f3f3f3; /* Cambia el color del ícono */
+
+    }
+    .closebtn i{
+      border-radius: 50px;
+      width: 40px;
+      height: auto;
+      transition: background-color 0.3s, color 0.3s; /* Transición suave */
+
+    }
+    .closebtn i:hover{
+      background-color: #e0ae16; /* Fondo más intenso al pasar el mouse */
+      color: black;
+    }
+
   .menu-burguer {
     position: relative; /* Necesario para posicionar el ícono relativo a este contenedor */
     width: 100%; /* Ajusta el ancho según necesites */
@@ -602,9 +812,12 @@ footer {
   .menu-burguer i {
     position: absolute; /* Permite mover el ícono fuera del contenedor */
     top: -100px; /* Lo coloca 20px por encima del contenedor */
-    font-size: 50px; /* Ajusta el tamaño del ícono */
+    font-size: 45px; /* Ajusta el tamaño del ícono */
     color: #dcccb4; /* Cambia el color del ícono */
   }
+
+  
+
 
   .title-container {
     display: flex;
@@ -622,6 +835,13 @@ footer {
   }
   .header-title br {
     display: none; /* Oculta el <br /> */
+  }
+  .texto-noticia h2{
+    font-size: 20px;
+  }
+  .texto-noticia{
+    height: 40%;
+
   }
 
   .header-container {
@@ -765,9 +985,7 @@ footer {
     display: none;
   }
 
-  .menu-container {
-    display: none;
-  }
+
 
   .tutorias {
     grid-template-columns: 1fr; /* Crea 2 columnas de tamaño igual */

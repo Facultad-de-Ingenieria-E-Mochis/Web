@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Header Diseño</title>
+    <title>FIM UAS</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -57,35 +57,19 @@
       <div class="uni-container">
         <div class="uni-title">
           <h4 class="uas-title">
-            U &nbsp;&nbsp;&nbsp; N &nbsp;&nbsp;&nbsp; I &nbsp;&nbsp;&nbsp; V
-            &nbsp;&nbsp;&nbsp; E &nbsp;&nbsp;&nbsp; R &nbsp;&nbsp;&nbsp; S
-            &nbsp;&nbsp;&nbsp; I &nbsp;&nbsp;&nbsp; D &nbsp;&nbsp;&nbsp; A
-            &nbsp;&nbsp;&nbsp; D
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
-            &nbsp;&nbsp;&nbsp; U &nbsp;&nbsp;&nbsp; T &nbsp;&nbsp;&nbsp; O
-            &nbsp;&nbsp;&nbsp; N &nbsp;&nbsp;&nbsp; O &nbsp;&nbsp;&nbsp; M
-            &nbsp;&nbsp;&nbsp; A
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D
-            &nbsp;&nbsp;&nbsp; E
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S
-            &nbsp;&nbsp;&nbsp; I &nbsp;&nbsp;&nbsp; N &nbsp;&nbsp;&nbsp; A
-            &nbsp;&nbsp;&nbsp; L &nbsp;&nbsp;&nbsp; O &nbsp;&nbsp;&nbsp; A
-            &nbsp;&nbsp;&nbsp;
+            UNIVERSIDAD AUTONOMA DE SINALOA
           </h4>
-          <h3 class="uas-title2">
-            U &nbsp; N &nbsp; I &nbsp; V &nbsp; E &nbsp; R &nbsp; S &nbsp; I
-            &nbsp; D &nbsp; A &nbsp; D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A &nbsp; U
-            &nbsp; T &nbsp; O &nbsp; N &nbsp; O &nbsp; M &nbsp; A
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D &nbsp; E &nbsp;&nbsp;&nbsp;&nbsp; S
-            &nbsp; I &nbsp; N &nbsp; A &nbsp; L &nbsp; O &nbsp; A
-          </h3>
         </div>
       </div>
       <div class="menu-burguer">
         <i class="fa-solid fa-bars"></i>
       </div>
     </header>
+    <div class="overlay"></div>
     <div class="menu-container">
+      <div class="closebtn">
+        <i class="fa-solid fa-x"></i>
+      </div>
       <div class="menu-btn">
         <nav class="nav">
           <a class="inicio" href="#nosotros">INICIO</a>
@@ -123,60 +107,46 @@
       </div>
     </div>
     <section class="noticias">
-      <h1 class="title-secion">Noticias</h1>
+      <h1 class="title-secion"></h1>
       <!-- Contenedor del carrusel -->
-      <div class="carrusel-wrapper">
-        <div class="carrusel-item">
-          <img src="Assets/uastorre.jpg" alt="Imagen Noticia 1" />
-          <div class="tema">UAS</div>
-          <h3>UAS invita a programa de becas de movilidad internacional</h3>
-          <div class="btn-ver">
-            <a href="#" class="ver-mas">Ver más</a>
+      <section class="carrusel">
+        <div class="carrusel-contenedor">
+          <div class="imagen" id="imagen1">
+            <img src="Assets/noticias1.jpg" alt="Noticia 1">
+            <div class="texto-noticia">
+              <h2>Con el periodico buelna se institucionalizo la difución objetiva y responsable del que hacer sustantivo que acontece en la uas</h2>
+            </div>
+          </div>
+          <div class="imagen" id="imagen2">
+            <img src="Assets/noticias2.jpg" alt="Noticia 2">
+          </div>
+          <div class="imagen" id="imagen3">
+            <img src="Assets/noticias3.jpg" alt="Noticia 3">
           </div>
         </div>
-
-        <div class="carrusel-item">
-          <img src="Assets/dengue.jpg" alt="Imagen Noticia 2" />
-          <div class="tema">Dengue</div>
-          <h3>La UAS profundiza estudio sobre el dengue</h3>
-          <div class="btn-ver">
-            <a href="#" class="ver-mas">Ver más</a>
-          </div>
-        </div>
-
-        <div class="carrusel-item">
-          <img src="Assets/conferencia.jpg" alt="Imagen Noticia 3" />
-          <div class="tema">Los Mochis</div>
-          <h3>
-            La Universidad Autónoma de Sinaloa lanza el podcast educativo
-            "Acceso y Derecho"
-          </h3>
-          <div class="btn-ver">
-            <a href="#" class="ver-mas">Ver más</a>
-          </div>
-        </div>
-      </div>
-      <!-- Indicadores (con íconos Font Awesome) -->
-      <div class="indicators">
-        <i class="fa-solid fa-circle active" data-index="0"></i>
-        <i class="fa-regular fa-circle" data-index="1"></i>
-        <i class="fa-regular fa-circle" data-index="2"></i>
-      </div>
-
-      <!-- Botón para pantallas grandes (opcional) -->
-      <div class="button-container">
-        <a href="#" class="yellow-button">Ver todas las noticias</a>
-      </div>
+        <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+        <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
     </section>
 
-    <section class="tutorias">
-      <h1 class="title-secion">Tutorias</h1>
-      <div class="tutorias-img">
-        <img src="Assets/Tutoria 1.jpg" alt="Tutorias" />
-      </div>
-      <div class="tutorias-img">
-        <img src="Assets/Tutoria 2.jpg" alt="Tutorias" />
-      </div>
+    <section class="Convocatorias">
+      <h1 class="title-secion">Convocatorias</h1>
+              <!-- Contenedor de Tarjetas -->
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta">
+                <img src="Assets/Convocatoria 1.jpg" alt="Convocatoria 1">
+            </div>
+            <div class="tarjeta">
+                <img src="Assets/Convocatoria 2.jpg" alt="Convocatoria 2">
+            </div>
+            <div class="tarjeta">
+                <img src="Assets/Convocatoria 3.jpg" alt="Convocatoria 3">
+            </div>
+            <div class="tarjeta">
+                <img src="Assets/Convocatoria 4.jpg" alt="Convocatoria 4">
+            </div>
+            <!-- Botón debajo de las tarjetas -->
+            <div class="boton-convocatorias">
+      <a href="#convocatorias" class="btn">Ver convocatorias anteriores</a>
     </section>
     <section class="servicios">
       <h1 class="title-secion">Servicio</h1>
