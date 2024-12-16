@@ -4,6 +4,27 @@ const overlay = document.querySelector('.overlay');
 const body = document.body; // Referencia al body para modificar el scroll
 const btnclose = document.querySelector('.closebtn i');
 
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute('page_id', '502961932904858'); // Reemplaza con el ID de tu página de Facebook
+chatbox.setAttribute('attribution', 'biz_inbox');
+
+window.fbAsyncInit = function () {
+  FB.init({
+    xfbml: true,
+    version: 'v17.0', // Cambia según la versión más reciente de la API
+  });
+};
+
+(function (d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, 'script', 'facebook-jssdk');
+
 menuBurguer.addEventListener('click', () => {
   menuContainer.classList.toggle('active');
   overlay.classList.toggle('active');
@@ -40,7 +61,7 @@ function cambiarImagen(direccion) {
 }
 
 const accessToken =
-  'EAAPzNOrPXUEBOZCvpg8MfUs1TIpVkqg00TZAht3GGK3RZBYQQGRubXy7RgB9pBvPWDFMqG2LLsVw3KunIZCA16IsYJjjNRCKkaTkrd85mWCIfqZCH3OVQRSxFEMm9MJshKO7KAhQ47P2VD3A0EAjsFWB6vxqXFGmW5UNZBBIHZAz1xAmQoMatQkZAqFmiqAKjDPo';
+  'EAAPzNOrPXUEBO7CTCbGPn8hz29PXXiRD25uhLs6jfeL5JlGyBuFnqdNOrzCxZAjZCLrL4tzqj2ppBEvobNCRPEA0xPRqnvawg3Dk7xr4ftVcECR8M79julJAlsXOwd51tPl9tklnwAjwbe7hdHiF9gJQepdIDdhrKyqN9ZBUrZCi5ZBpSYKagmjN9MxlPFzbB';
 
 // Realizamos la solicitud a la API de Facebook
 
