@@ -38,3 +38,60 @@ function cambiarImagen(direccion) {
   const desplazamiento = -currentIndex * 100;
   carruselContenedor.style.transform = `translateX(${desplazamiento}%)`;
 }
+
+const accessToken =
+  'EAAPzNOrPXUEBO5TYqPXxTHvkloPPxt52JUh6OTuIJqYsYKnBo1vznyHa6rWrOQTTH7xr7JlaLZAH2FW6fxgvtN0D9cR1NRfBUVg2IJkZBbhitan0WrCVxjwme4GbXWZA7a5C5fBZCZAhEBVZBOAAJFSXhZB9C5u8krhuZCtJmNzlAmwDr77Sjg7ssjmhPQmaFwLnXTTD2i4dBsBXHnVzgRpTI55E';
+
+// Realizamos la solicitud a la API de Facebook
+
+// Realizamos la solicitud a la API de Facebook
+fetch(
+  `https://graph.facebook.com/v15.0/502961932904858/posts?fields=message,created_time,full_picture&access_token=${accessToken}`
+)
+  .then((response) => response.json())
+  .then((data) => {
+    const postsContainer = document.getElementById('posts-container');
+
+    // Recorremos las publicaciones y las mostramos
+    data.data.forEach((post) => {
+      // Verificamos si la publicación tiene un mensaje o una imagen
+      if (
+        (post.message && post.message.trim() !== '') ||
+        (post.full_picture && post.message.trim() !== '')
+      ) {
+        const postElement = document.createElement('div');
+        postElement.classList.add('post');
+
+        // Crear y agregar el mensaje si existe
+        if (post.message && post.message.trim() !== '') {
+          const message = document.createElement('div');
+          message.classList.add('message');
+          message.textContent = post.message;
+          postElement.appendChild(message);
+        }
+
+        // Crear y agregar la imagen si existe
+        if (post.full_picture) {
+          const image = document.createElement('img');
+          image.src = post.full_picture;
+          image.alt = 'Imagen de la publicación';
+          image.style.maxWidth = '100%'; // Ajusta el tamaño de la imagen para que no desborde
+          image.style.borderRadius = '8px'; // Opcional: agrega bordes redondeados
+          postElement.appendChild(image);
+        }
+
+        // Crear y agregar la fecha de creación
+        const createdTime = document.createElement('div');
+        createdTime.classList.add('created_time');
+        createdTime.textContent = `Publicado el: ${new Date(
+          post.created_time
+        ).toLocaleString()}`;
+        postElement.appendChild(createdTime);
+
+        postsContainer.appendChild(postElement);
+      }
+    });
+  })
+  .catch((error) =>
+    console.error('Error al obtener las publicaciones:', error)
+  );

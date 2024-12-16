@@ -196,7 +196,7 @@ body.no-scroll {
 
 /* Contenedor principal de las noticias */
 .noticias {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding-top: 20px;
   gap: 20px; /* Espacio entre las noticias */
@@ -537,6 +537,76 @@ button:hover {
 .boton-centrado:hover {
   background-color: #0056b3; /* Color al pasar el cursor */
 }
+
+
+
+
+
+
+
+
+
+
+/*
+
+Comenzamos con los estilos para las publicaciones de facebook
+
+*/
+/* Estilos para la sección de publicaciones de Facebook */
+.facebook-publicaciones {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.facebook-publicaciones h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #444;
+}
+
+#posts-container {
+  margin-top: 20px;
+}
+
+.post {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.message {
+  font-size: 16px;
+  color: #333;
+  text-align: justify; /* Justifica el texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin-bottom: 10px; /* Espacio con el resto del contenido */
+  white-space: pre-wrap; /* Mantiene saltos de línea como en el texto original */
+}
+
+.created_time {
+  font-size: 12px;
+  color: #666;
+  text-align: right; /* Alinea la fecha a la derecha */
+  margin-top: 10px;
+}
+
+
+
+
+
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
