@@ -63,7 +63,7 @@ function cambiarImagen(direccion) {
 }
 
 const accessToken =
-  'EAAPzNOrPXUEBO7CTCbGPn8hz29PXXiRD25uhLs6jfeL5JlGyBuFnqdNOrzCxZAjZCLrL4tzqj2ppBEvobNCRPEA0xPRqnvawg3Dk7xr4ftVcECR8M79julJAlsXOwd51tPl9tklnwAjwbe7hdHiF9gJQepdIDdhrKyqN9ZBUrZCi5ZBpSYKagmjN9MxlPFzbB';
+  'EAAPzNOrPXUEBO6e1Nydl0DvW4liMf3Q0ejgRj81v6wJ7LDy0Yu2EKlZCyPS8QoB9Wn5filCjS3z9MD43chYzkyBW3NKWPEObfARk7zVgOZBmeJ0KKENAT27hFr0x5JcbHGwPvqdmZBHG1JLPIuK3ogf0bBS3egGgp0JWaOH8QFEoBOoIHTwISn9PLYuIgyEOV5GttArJQRBc6XasRHkmHoN';
 
 // Realizamos la solicitud a la API de Facebook
 
