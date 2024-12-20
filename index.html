@@ -78,10 +78,49 @@
           <a href="#noticia">TU FACULTAD</a>
           <a href="#multimedia">OFERTA EDUCATIVA</a>
           <a href="#semanario">SERVICIOS</a>
-          <a href="#contacto">NOTICIAS</a>
-          <a href="#contacto">ESTUDIANTES</a>
+          <a href="#noticias">NOTICIAS</a>
+          <a id="contact-link" href="#contacto">CONTACTANOS</a>
         </nav>
       </div>
+      <div id="contact-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Contáctanos</h2>
+          <form id="contact-form"  method="POST">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder=" " required>
+              <label for="name">Nombre</label>
+            </div>
+          
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder=" " required>
+              <label for="email">Correo electrónico</label>
+            </div>
+          
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder=" " pattern="[0-9]{10}" required>
+              <label for="phone">Teléfono de contacto</label>
+            </div>
+          
+            <div class="form-group">
+              <select id="request-type" name="request-type" required>
+                <option value="" disabled selected></option>
+                <option value="felicitacion">Felicitación</option>
+                <option value="queja">Solicitud de queja</option>
+                <option value="comentario">Comentario en general</option>
+              </select>
+              <label for="request-type">Tipo de solicitud</label>
+            </div>
+          
+            <div class="form-group">
+              <textarea id="description" name="description" placeholder=" " rows="4" required></textarea>
+              <label for="description">Descripción</label>
+            </div>
+            <button class="btn-enviar" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      
     </div>
     <div class="banner">
       <div class="texto">

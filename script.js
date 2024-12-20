@@ -4,6 +4,33 @@ const overlay = document.querySelector('.overlay');
 const body = document.body; // Referencia al body para modificar el scroll
 const btnclose = document.querySelector('.closebtn i');
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactLink = document.getElementById("contact-link");
+  const modal = document.getElementById("contact-modal");
+  const closeModal = document.querySelector(".close-btn");
+
+  contactLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.remove("modal-hide"); // Aseguramos que no tenga la clase de ocultar
+    modal.classList.add("modal-show"); // Añadimos la clase de mostrar
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("modal-show"); // Quitamos la clase de mostrar
+    modal.classList.add("modal-hide"); // Añadimos la clase de ocultar
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("modal-show"); // Quitamos la clase de mostrar
+      modal.classList.add("modal-hide"); // Añadimos la clase de ocultar
+    }
+  });
+});
+
+
+
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute('page_id', '502961932904858'); // Reemplaza con el ID de tu página de Facebook
 chatbox.setAttribute('attribution', 'biz_inbox'); // Atribución para el buzón de negocios
@@ -63,7 +90,7 @@ function cambiarImagen(direccion) {
 }
 
 const accessToken =
-  'EAAPzNOrPXUEBO6e1Nydl0DvW4liMf3Q0ejgRj81v6wJ7LDy0Yu2EKlZCyPS8QoB9Wn5filCjS3z9MD43chYzkyBW3NKWPEObfARk7zVgOZBmeJ0KKENAT27hFr0x5JcbHGwPvqdmZBHG1JLPIuK3ogf0bBS3egGgp0JWaOH8QFEoBOoIHTwISn9PLYuIgyEOV5GttArJQRBc6XasRHkmHoN';
+  'EAAPzNOrPXUEBO9xJiKo4KZC2yACJeqIZB3T5K7ik305wMPZAFIUYtDdxPIBafEbnwWIyLb9iryfCLMXwcqCgWRPSnLRk8fWcZBv1S8YwPfBxHJSZC320gTe22ZCeAZBiRP2JLLTJT4xhT29UZCZCEYZB2UZAfu59KIFdODX7ZARZB3PkoFpDZBGpFsJFGdDz6MrbHtV0M0';
 
 // Realizamos la solicitud a la API de Facebook
 

@@ -261,7 +261,7 @@ body.no-scroll {
   object-fit: cover;
 }
 
-button {
+.carrusel button {
   position: absolute;
   top: 50%;
   z-index: 100;
@@ -274,7 +274,7 @@ button {
   transform: translateY(-50%);
 }
 
-button:hover {
+.carrusel button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -538,20 +538,183 @@ button:hover {
   background-color: #0056b3; /* Color al pasar el cursor */
 }
 
+/* Estilos para el modal de contactanos*/
+/* Modal styles */
+.modal {
+  opacity: 0; /* Comenzamos con el modal invisible */
+  transform: scale(0.9); /* Escala inicial para el efecto */
+  visibility: hidden; /* Ocultamos el modal inicialmente */
+  position: fixed;
+  top: 50%; /* Posicionamos centrado verticalmente */
+  left: 50%; /* Posicionamos centrado horizontalmente */
+  transform: translate(-50%, -50%) scale(0.9); /* Ajustamos el centrado y la escala */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 1000; /* Aseguramos que el modal esté encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.1s ease; /* Transición suave */
+
+}
+
+.modal.modal-show {
+  opacity: 1; /* Mostramos el modal */
+  transform: translate(-50%, -50%) scale(1); /* Escala normal */
+  visibility: visible; /* Hacemos el modal clickeable */
+}
+
+.modal.modal-hide {
+  opacity: 0; /* Ocultamos el modal */
+  transform: translate(-50%, -50%) scale(0.9); /* Reducimos ligeramente el tamaño */
+  visibility: hidden; /* Lo desactivamos visualmente */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar el modal */
+  
+}
+
+/* Botón de cierre */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Estilizado general del formulario */
+
+
+/* Estilo general */
+/* Estilo general */
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Estilo de los inputs, textarea, select y botón */
+input,
+textarea,
+select,
+.btn-enviar {
+  width: 100%;  /* Asegura que todos tengan el mismo tamaño */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: none;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #000;
+  box-sizing: border-box; /* Evita problemas con el padding y el ancho */
+
+}
+
+/* Aseguramos espacio para el label flotante */
+input::placeholder,
+textarea::placeholder {
+  color: transparent;
+}
+
+/* Estilo del label */
+label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  color: #999;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Cuando el input tiene foco o contenido */
+input:focus + label,
+textarea:focus + label,
+select:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label,
+select:valid + label {
+  top: -15px;
+  left: 10px;
+  font-size: 12px;
+  color: #007bff; /* Cambia a tu color preferido */
+}
+
+/* Cambiar el borde del input al enfocarlo */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff; /* Cambia a tu color preferido */
+}
+
+/* Estilo adicional para select */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  color: #000;
+}
+
+/* Asegurar que el label solo suba cuando se selecciona algo */
+select:not(:focus):not(:valid) + label {
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  color: #999;
+}
+
+/* Aseguramos que textarea tenga buen aspecto */
+textarea {
+  resize: vertical;
+}
+
+/* Botón de envío */
+.btn-enviar {
+  background: linear-gradient(
+    to left,
+    #1d71b8,
+    #003595
+  );  
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-top: 15px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.btn-enviar:hover {
+  background: linear-gradient(
+    to left,
+    #0c7cd8,
+    blue
+  );
+}
 
 
 
 
 
 
-
-
-
-/*
-
-Comenzamos con los estilos para las publicaciones de facebook
-
-*/
 /* Estilos para la sección de publicaciones de Facebook */
 .facebook-publicaciones {
   max-width: 800px;
