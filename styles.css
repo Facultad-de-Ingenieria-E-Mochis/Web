@@ -158,7 +158,7 @@ body.no-scroll {
   margin-top: 2px;
   width: 100%;
   height: 300px;
-  background-image: url('Assets/banner.jpeg'); /* Imagen de fondo */
+  background-image: url('Assets/banner-lleVNToe7-transformed.webp'); /* Imagen de fondo */
   background-size: cover; /* La imagen cubre todo el área */
   background-position: left; /* Alinea la imagen a la izquierda */
   position: relative;
@@ -732,7 +732,7 @@ textarea {
 }
 
 #posts-container {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .post {
@@ -933,16 +933,29 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-  .banner {
-    display: none;
-  }
-  .uni-title{
-    display: none;
-  }
-  /* Estilo base para el contenedor */
-  /* Media query para pantallas pequeñas (celulares) */
+#posts-container {
+  width: 100%; /* Ajusta al ancho del contenedor padre */
+  max-width: 100%; /* Evita que el contenido crezca más allá del contenedor */
+  overflow: hidden; /* Oculta el desbordamiento del contenido */
+  box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño total */
+}
+
+
+
+section .facebook-publicaciones{
+  width: 100%; /* Puede ajustarse a un valor fijo como `600px` */
+  overflow: hidden; /* Evita desbordamientos */
+  box-sizing: border-box;
+}
+
+
   @media (max-width: 768px) {
+    .banner {
+      display: none;
+    }
+    .uni-title{
+      display: none;
+    }
     .menu-container {
       position: fixed;
       top: 0;
