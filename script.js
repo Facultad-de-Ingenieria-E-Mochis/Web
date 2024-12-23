@@ -4,32 +4,29 @@ const overlay = document.querySelector('.overlay');
 const body = document.body; // Referencia al body para modificar el scroll
 const btnclose = document.querySelector('.closebtn i');
 
+document.addEventListener('DOMContentLoaded', () => {
+  const contactLink = document.getElementById('contact-link');
+  const modal = document.getElementById('contact-modal');
+  const closeModal = document.querySelector('.close-btn');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const contactLink = document.getElementById("contact-link");
-  const modal = document.getElementById("contact-modal");
-  const closeModal = document.querySelector(".close-btn");
-
-  contactLink.addEventListener("click", (e) => {
+  contactLink.addEventListener('click', (e) => {
     e.preventDefault();
-    modal.classList.remove("modal-hide"); // Aseguramos que no tenga la clase de ocultar
-    modal.classList.add("modal-show"); // Añadimos la clase de mostrar
+    modal.classList.remove('modal-hide'); // Aseguramos que no tenga la clase de ocultar
+    modal.classList.add('modal-show'); // Añadimos la clase de mostrar
   });
 
-  closeModal.addEventListener("click", () => {
-    modal.classList.remove("modal-show"); // Quitamos la clase de mostrar
-    modal.classList.add("modal-hide"); // Añadimos la clase de ocultar
+  closeModal.addEventListener('click', () => {
+    modal.classList.remove('modal-show'); // Quitamos la clase de mostrar
+    modal.classList.add('modal-hide'); // Añadimos la clase de ocultar
   });
 
-  window.addEventListener("click", (e) => {
+  window.addEventListener('click', (e) => {
     if (e.target === modal) {
-      modal.classList.remove("modal-show"); // Quitamos la clase de mostrar
-      modal.classList.add("modal-hide"); // Añadimos la clase de ocultar
+      modal.classList.remove('modal-show'); // Quitamos la clase de mostrar
+      modal.classList.add('modal-hide'); // Añadimos la clase de ocultar
     }
   });
 });
-
-
 
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute('page_id', '502961932904858'); // Reemplaza con el ID de tu página de Facebook
@@ -145,3 +142,57 @@ fetch(
   .catch((error) =>
     console.error('Error al obtener las publicaciones:', error)
   );
+
+// Mostrar mensaje solo si el formulario está completo y enviado
+document
+  .getElementById('contact-form')
+  .addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita el envío predeterminado del formulario
+
+    // Validar si todos los campos requeridos están llenos
+    if (validateForm()) {
+      // Obtener el tipo de solicitud seleccionado
+      var requestType = document.getElementById('request-type').value;
+
+      // Mostrar el mensaje con el tipo de solicitud
+      document.getElementById('request-type-msg').textContent = requestType;
+      document.getElementById('confirmation-message').style.display = 'block';
+
+      // Cerrar el modal después de mostrar el mensaje
+      setTimeout(function () {
+        document.getElementById('contact-modal').style.display = 'none';
+        document.getElementById('confirmation-message').style.display = 'none';
+        resetForm(); // Limpiar el formulario
+      }, 3000);
+    }
+  });
+
+// Validar que todos los campos requeridos estén completos
+function validateForm() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const requestType = document.getElementById('request-type').value.trim();
+  const description = document.getElementById('description').value.trim();
+
+  // Verifica que todos los campos estén llenos
+  if (name && email && phone && requestType && description) {
+    return true; // El formulario está completo
+  }
+
+  // Mostrar alerta si el formulario no está completo
+  alert('Por favor, completa todos los campos requeridos.');
+  return false; // El formulario no está completo
+}
+
+// Cerrar el modal al hacer clic en el botón de cerrar
+document.querySelector('.close-btn').addEventListener('click', function () {
+  document.getElementById('contact-modal').style.display = 'none'; // Ocultar el modal
+  document.getElementById('confirmation-message').style.display = 'none'; // Ocultar el mensaje
+  resetForm(); // Limpiar el formulario
+});
+
+// Función para limpiar los campos del formulario
+function resetForm() {
+  document.getElementById('contact-form').reset(); // Limpia los valores del formulario
+}
